@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Ajv from 'ajv';
 import Test from './test';
 
-export default class Login extends Component {
+export default class JsonTest extends Component {
 
   clickLogin(){
     var schema = {
