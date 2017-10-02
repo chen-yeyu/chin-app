@@ -67,12 +67,11 @@ const LoginReducer = function(state={}, action){
 
 class validateForm extends Component {
   render(){
-    const {input, label, type, inline, meta: { asyncValidating, touched, error }} = this.props;
+    const {input, label, type, inline,title, meta: { asyncValidating, touched, error }} = this.props;
     return (
       <span>
-        <label>{label}</label>
-        <input {...input} className="corp-ReduxThunk-form-field" type={type} placeholder={label} />
-        {touched && error && <span style={{"color":"red"}}> {error} </span>}
+        {touched && error && <span style={{"color":"green"}}> {title} {error} </span>}<br/>
+        <label>{label}</label> <input {...input} className="corp-ReduxThunk-form-field" type={type} placeholder={label} />
      </span>
     );
 
@@ -91,8 +90,8 @@ class loginForm extends Component {
     let this_form = this.props;
     return (<form>
             <div>
-                <Field name="username" type="text" component={validateForm} label="username: "/><br/>
-                <Field name="password" type="password" component={validateForm} label="password: "/>
+                <Field name="username" type="text" component={validateForm} label="username: " title = "ユーザ名:"/><br/>
+                <Field name="password" type="password" component={validateForm} label="password: " title = "パスワード:"/>
            </div>
          </form>);
   }
@@ -104,7 +103,7 @@ class App extends Component {
       <form>
         <Field name="login" component={loginForm} />
         <button type="submit" onClick={this.props.handleSubmit(clickLogin(this.props))}> Login </button><br/>
-        <h1>user id:{this.props.LoginReducer.id == undefined || "" ? "  no user" : this.props.LoginReducer.id}</h1>
+        <h1>user id:{this.props.LoginReducer.id == undefined || this.props.LoginReducer.id == "" ? "  no user" : this.props.LoginReducer.id}</h1>
         <h1>user password:{this.props.LoginReducer.password}</h1>
         <h1>user username:{this.props.LoginReducer.username}</h1>
         <h1>user first_name:{this.props.LoginReducer.first_name}</h1>
