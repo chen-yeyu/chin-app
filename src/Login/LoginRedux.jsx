@@ -35,7 +35,7 @@ function CleanScreen () {
 
 function FetchPosts (value) {
   var mydata = value;
-  fetch('http://localhost:5001/mypage/react', {
+  fetch('http://localhost:5001/mypage/', {
     method : 'POST',
     mode : 'cors',
     body: mydata

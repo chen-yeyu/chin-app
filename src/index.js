@@ -13,7 +13,7 @@ export default class AllComponent extends Component {
     return (
     <div>
       <App /><br/>
-      <ReactRouter />
+      <LoginRedux />
     </div>
     );
   }

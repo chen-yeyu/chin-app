@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Ajv from 'ajv';
-import Test from './test';
+import Test from './testJson';
 
 export default class JsonTest extends Component {
 
