@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`component matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    username: 
+  </h1>
+  <input
+    type="text"
+  />
+  <br />
+  <h1>
+    password: 
+  </h1>
+  <input
+    type="password"
+  />
+  <br />
+  <br />
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "height": 100,
+        "width": 300,
+      }
+    }
+  >
+    Login
+  </button>
+  <br />
+  <h1>
+    user id:
+      no user
+  </h1>
+  <h1>
+    user password:
+  </h1>
+  <h1>
+    user username:
+  </h1>
+  <h1>
+    user first_name:
+  </h1>
+  <h1>
+    user last_name:
+  </h1>
+  <h1>
+    post error:
+  </h1>
+</div>
+`;
+
 exports[`matches snapshot 1`] = `
 <div
   className="App"

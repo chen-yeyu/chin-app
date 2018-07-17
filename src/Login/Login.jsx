@@ -32,8 +32,13 @@ function CleanScreen () {
   LoginStore.dispatch(CleanScreenAction(data));
 }
 
+//Jest sample
+export function getUserName(userID) {
+  return 5;
+}
+
 //localhost:3030/test2
-function FetchPosts (value) {
+export function FetchPosts (value) {
   var mydata = value;
   fetch('http://localhost:5001/mypage/react', {
     method : 'POST',
